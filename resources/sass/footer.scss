@@ -96,3 +96,37 @@ a:hover {
         }
     }
 }
+
+.footer-footer {
+    background-color: $grey;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+
+        .sign-up {
+            color: white;
+            border: 1px solid $dc-blue;
+            padding: 1rem;
+            cursor: pointer;
+        }
+
+        .socials {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+
+            .socials-title {
+                color: $dc-blue;
+            }
+
+            .icons {
+                .list-wrapper {
+                    @include list-wrapper;
+                }
+            }
+        }
+    }
+}
