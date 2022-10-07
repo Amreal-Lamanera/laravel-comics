@@ -1,0 +1,17 @@
+//
+@import './partials/general.scss';
+@import './partials/mixins';
+@import './partials/variables';
+@import './header';
+
+main {
+    background-color: $dark;
+    color: white;
+
+    .jumbotron {
+        background-image: url('../../public/assets/jumbotron.jpg');
+        background-position: top;
+        background-size: cover;
+        height: 40vh;
+    }
+}
