@@ -70,6 +70,61 @@ a {
   }
 }
 
+.footer-header {
+  background-color: #0C7CEC;
+}
+
+.footer-header .container {
+  color: #FFF;
+  padding: 3rem 1rem;
+}
+
+.footer-header .container .footer-list {
+  display: flex;
+  gap: 1.5rem;
+  white-space: nowrap;
+}
+
+.footer-header .container .footer-list .footer__list__item {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.footer-header .container .footer-list .footer__list__item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-header .container .footer-list .footer__list__item a img {
+  height: 50px;
+}
+
+span {
+  display: none;
+}
+
+a:hover span {
+  display: block;
+}
+
+a:hover {
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  span {
+    display: inline;
+  }
+
+  a:hover {
+    flex-direction: row;
+  }
+}
+
 main {
   background-color: #1c1c1c;
   color: white;
