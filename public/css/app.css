@@ -125,6 +125,48 @@ a:hover {
   }
 }
 
+.footer-main {
+  background-image: url(/images/footer-bg.jpg?dfd68d2946f211e1b678af05fd2f830b);
+  background-size: cover;
+}
+
+.footer-main .container {
+  display: flex;
+  padding: 2rem 0;
+  color: #FFF;
+  background-image: url(/images/dc-logo-bg.png?f4404ce9dc132a08a47f19e3f73f1417);
+  background-repeat: no-repeat;
+  background-position: center right;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.lists-wrapper .list {
+  margin-bottom: 1rem;
+}
+
+.lists-wrapper .list:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.lists-wrapper .list h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.lists-wrapper .list li:not(.list-title) {
+  line-height: 1.5rem;
+  font-size: 0.75rem;
+  color: #818181;
+}
+
+.lists-wrapper .list li a:hover {
+  text-decoration: underline;
+}
+
 main {
   background-color: #1c1c1c;
   color: white;

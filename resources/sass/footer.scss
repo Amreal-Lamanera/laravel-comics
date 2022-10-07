@@ -51,3 +51,48 @@ a:hover {
         flex-direction: row;
     }
 }
+
+.footer-main {
+    background-image: url('../../public/assets/footer-bg.jpg');
+    background-size: cover;
+
+    .container {
+        display: flex;
+        padding: 2rem 0;
+        color: #FFF;
+        background-image: url('../../public/assets/dc-logo-bg.png');
+        background-repeat: no-repeat;
+        background-position: center right;
+        gap: 2rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+.lists-wrapper {
+
+    .list {
+        margin-bottom: 1rem;
+
+        &:first-child {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        li:not(.list-title) {
+            line-height: 1.5rem;
+            font-size: 0.75rem;
+            color: #818181;
+        }
+
+        li a:hover {
+            text-decoration: underline;
+        }
+    }
+}
