@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="index container">
     <div class="current">
         <h2>current series</h2>
     </div>

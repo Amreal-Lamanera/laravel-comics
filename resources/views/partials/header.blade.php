@@ -1,7 +1,9 @@
 <header class="container">
-    <div class="logo">
-        <img src="{{ asset('./assets/dc-logo.png')}}" alt="DC Logo">
-    </div>
+    <a href="{{ route('home') }}">
+        <div class="logo">
+            <img src="{{ asset('./assets/dc-logo.png')}}" alt="DC Logo">
+        </div>
+    </a>
 
     @php
         $headerWidg = [

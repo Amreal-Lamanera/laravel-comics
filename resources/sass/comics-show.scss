@@ -1,0 +1,86 @@
+.show-details {
+    background-color: #FFF;
+    color: $dark;
+
+    .poster-container {
+        background-color: $dc-blue;
+        height: 5rem;
+        position: relative;
+
+        .img-container {
+            position: absolute;
+            bottom: 1rem;
+            border: 1px solid #FFF;
+
+            img {
+                display: block;
+            }
+        }
+
+        .type {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #00a9d9;
+            text-transform: uppercase;
+            padding: 0.25rem;
+            font-size: 0.75rem;
+
+            &.gallery {
+                top: unset;
+                bottom: 0;
+                right: 0;
+                text-align: center;
+            }
+        }
+    }
+
+    .comic-desc {
+        padding: 4.5rem 0;
+
+        h1 {
+            text-transform: uppercase;
+            padding-bottom: 2rem;
+        }
+
+        .buy {
+            background-color: #55ba59;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            color: #FFF;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid $dark;
+
+            strong {
+                color: #bafc9a;
+            }
+        }
+    }
+
+    .comic-specs {
+        background-color: #f6f6f6;
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+
+        h3 {
+            padding-bottom: 1.5rem;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 25%);
+
+            li {
+                border-top: 1px solid lightgray;
+                padding: 0.5rem 0;
+
+                &:last-child,
+                &:nth-last-child(2) {
+                    border-bottom: 1px solid lightgray;
+                }
+            }
+        }
+
+    }
+}

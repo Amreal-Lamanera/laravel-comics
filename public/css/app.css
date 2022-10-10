@@ -25,29 +25,29 @@ a {
   text-decoration: none;
 }
 
-.container {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.container .logo {
+header .logo {
   height: 100px;
 }
-.container .main-nav .nav__list {
+header .main-nav .nav__list {
   display: flex;
   gap: 1.5rem;
   display: none;
 }
-.container .main-nav .nav__list .nav__list__item {
+header .main-nav .nav__list .nav__list__item {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1rem;
 }
-.container .main-nav .nav__list .nav__list__item.active, .container .main-nav .nav__list .nav__list__item:hover {
+header .main-nav .nav__list .nav__list__item.active, header .main-nav .nav__list .nav__list__item:hover {
   color: #0C7CEC;
   position: relative;
 }
-.container .main-nav .nav__list .nav__list__item.active:after, .container .main-nav .nav__list .nav__list__item:hover:after {
+header .main-nav .nav__list .nav__list__item.active:after, header .main-nav .nav__list .nav__list__item:hover:after {
   position: absolute;
   height: 5px;
   width: 100%;
@@ -111,14 +111,14 @@ a:hover {
   }
 }
 .footer-main {
-  background-image: url("../../public/assets/footer-bg.jpg");
+  background-image: url("../assets/footer-bg.jpg");
   background-size: cover;
 }
 .footer-main .container {
   display: flex;
   padding: 2rem 0;
   color: #FFF;
-  background-image: url("../../public/assets/dc-logo-bg.png");
+  background-image: url("../assets/dc-logo-bg.png");
   background-repeat: no-repeat;
   background-position: center right;
   gap: 2rem;
@@ -175,17 +175,88 @@ a:hover {
   gap: 1.5rem;
 }
 
+.show-details {
+  background-color: #FFF;
+  color: #1c1c1c;
+}
+.show-details .poster-container {
+  background-color: #0C7CEC;
+  height: 5rem;
+  position: relative;
+}
+.show-details .poster-container .img-container {
+  position: absolute;
+  bottom: 1rem;
+  border: 1px solid #FFF;
+}
+.show-details .poster-container .img-container img {
+  display: block;
+}
+.show-details .poster-container .type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00a9d9;
+  text-transform: uppercase;
+  padding: 0.25rem;
+  font-size: 0.75rem;
+}
+.show-details .poster-container .type.gallery {
+  top: unset;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+}
+.show-details .comic-desc {
+  padding: 4.5rem 0;
+}
+.show-details .comic-desc h1 {
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+.show-details .comic-desc .buy {
+  background-color: #55ba59;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  color: #FFF;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #1c1c1c;
+}
+.show-details .comic-desc .buy strong {
+  color: #bafc9a;
+}
+.show-details .comic-specs {
+  background-color: #f6f6f6;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+.show-details .comic-specs h3 {
+  padding-bottom: 1.5rem;
+}
+.show-details .comic-specs ul {
+  display: grid;
+  grid-template-columns: repeat(2, 25%);
+}
+.show-details .comic-specs ul li {
+  border-top: 1px solid lightgray;
+  padding: 0.5rem 0;
+}
+.show-details .comic-specs ul li:last-child, .show-details .comic-specs ul li:nth-last-child(2) {
+  border-bottom: 1px solid lightgray;
+}
+
 main {
   background-color: #1c1c1c;
   color: white;
 }
 main .jumbotron {
-  background-image: url("../../public/assets/jumbotron.jpg");
+  background-image: url("../assets/jumbotron.jpg");
   background-position: top;
   background-size: cover;
   height: 40vh;
 }
-main .container {
+main .container.index {
   padding-top: 3rem;
   display: flex;
   flex-direction: column;
@@ -193,7 +264,7 @@ main .container {
   gap: 2rem;
   position: relative;
 }
-main .container .current {
+main .container.index .current {
   text-transform: uppercase;
   position: absolute;
   background-color: #0C7CEC;
@@ -205,7 +276,7 @@ main .container .current {
   align-items: center;
   padding: 0 1rem;
 }
-main .container .load {
+main .container.index .load {
   padding: 1rem 5rem;
   background-color: #0C7CEC;
   text-transform: uppercase;

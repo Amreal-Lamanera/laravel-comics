@@ -4,19 +4,20 @@
 @import './partials/variables';
 @import './header';
 @import './footer';
+@import './comics-show.scss';
 
 main {
     background-color: $dark;
     color: white;
 
     .jumbotron {
-        background-image: url('../../public/assets/jumbotron.jpg');
+        background-image: url('../assets/jumbotron.jpg');
         background-position: top;
         background-size: cover;
         height: 40vh;
     }
 
-    .container {
+    .container.index {
         padding-top: 3rem;
         display: flex;
         flex-direction: column;

@@ -53,14 +53,14 @@ a:hover {
 }
 
 .footer-main {
-    background-image: url('../../public/assets/footer-bg.jpg');
+    background-image: url('../assets/footer-bg.jpg');
     background-size: cover;
 
     .container {
         display: flex;
         padding: 2rem 0;
         color: #FFF;
-        background-image: url('../../public/assets/dc-logo-bg.png');
+        background-image: url('../assets/dc-logo-bg.png');
         background-repeat: no-repeat;
         background-position: center right;
         gap: 2rem;
