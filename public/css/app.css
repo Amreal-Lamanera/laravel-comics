@@ -23,6 +23,15 @@ menu {
 a {
   color: currentColor;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.c-blue {
+  color: #00a9d9;
+}
+
+.txt-up {
+  text-transform: uppercase;
 }
 
 header {
@@ -209,12 +218,17 @@ a:hover {
 }
 .show-details .comic-desc {
   padding: 4.5rem 0;
+  display: flex;
+  gap: 2rem;
 }
-.show-details .comic-desc h1 {
+.show-details .comic-desc .content {
+  flex-basis: 70%;
+}
+.show-details .comic-desc .content h1 {
   text-transform: uppercase;
   padding-bottom: 2rem;
 }
-.show-details .comic-desc .buy {
+.show-details .comic-desc .content .buy {
   background-color: #55ba59;
   display: flex;
   justify-content: space-between;
@@ -223,27 +237,69 @@ a:hover {
   margin-bottom: 1rem;
   border-bottom: 1px solid #1c1c1c;
 }
-.show-details .comic-desc .buy strong {
+.show-details .comic-desc .content .buy .price {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.show-details .comic-desc .content .buy .check {
+  padding-left: 1.5rem;
+  position: relative;
+}
+.show-details .comic-desc .content .buy .check select {
+  background-color: transparent;
+  border: none;
+  color: #FFF;
+  font-weight: bold;
+}
+.show-details .comic-desc .content .buy .check::before {
+  content: "";
+  position: absolute;
+  height: calc(100% + 2rem);
+  width: 1px;
+  background-color: #1c1c1c;
+  top: -1rem;
+  left: 0.75rem;
+}
+.show-details .comic-desc .content .buy strong {
   color: #bafc9a;
 }
-.show-details .comic-specs {
-  background-color: #f6f6f6;
-  border-top: 1px solid lightgray;
-  border-bottom: 1px solid lightgray;
+.show-details .comic-desc .adv {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
-.show-details .comic-specs h3 {
+.show-details .comic-desc .adv h3 {
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+}
+.show-details .comic-details {
+  background-color: #f6f6f6;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+.show-details .comic-details .container {
+  padding-bottom: 6rem;
+}
+.show-details .comic-details .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+.show-details .comic-details .grid-container h3 {
   padding-bottom: 1.5rem;
 }
-.show-details .comic-specs ul {
+.show-details .comic-details .grid-container ul {
   display: grid;
-  grid-template-columns: repeat(2, 25%);
+  grid-template-columns: repeat(2, 1fr);
 }
-.show-details .comic-specs ul li {
-  border-top: 1px solid lightgray;
+.show-details .comic-details .grid-container ul li {
+  border-top: 1px solid #e5e5e5;
   padding: 0.5rem 0;
 }
-.show-details .comic-specs ul li:last-child, .show-details .comic-specs ul li:nth-last-child(2) {
-  border-bottom: 1px solid lightgray;
+.show-details .comic-details .grid-container ul li:last-child, .show-details .comic-details .grid-container ul li:nth-last-child(2) {
+  border-bottom: 1px solid #e5e5e5;
 }
 
 main {

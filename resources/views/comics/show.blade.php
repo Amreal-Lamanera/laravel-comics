@@ -24,39 +24,104 @@
     </div>
     
     <div class="container comic-desc">
-        <h1>
-            {{ $comic['series'] }}
-        </h1>
-        <div class="buy">
-            <span>
-                <strong>U.S. Price: {{ $comic['price'] }}</strong>
-            </span>
-            <strong>AVAIABLE</strong>
+        <div class="content">
+            <h1>
+                {{ $comic['title'] }}
+            </h1>
+            <div class="buy">
+                <div class="price">
+                    <span>
+                        <strong>U.S. Price: {{ $comic['price'] }}</strong>
+                    </span>
+                    <strong>AVAILABLE</strong>
+                </div>
+                <div class="check">
+                    <select name="" id="">
+                        <option value="" default>
+                            Check Availability
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <p>
+                {{ $comic['description'] }}
+            </p>
         </div>
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex id repudiandae, facere nemo veniam consectetur officia. Adipisci ipsa, sint, similique unde hic omnis quisquam eius natus facere atque quo eveniet.
-            Praesentium optio saepe laudantium repudiandae beatae nesciunt, soluta numquam eum id cumque, aut ullam placeat quia! Doloremque ratione nesciunt eaque numquam debitis a laborum, nihil pariatur ipsum corporis perferendis eius.
-            Enim ut quod beatae quo harum odio dignissimos, quaerat quidem nulla inventore incidunt nesciunt pariatur. Officiis illum quod quidem reprehenderit. Earum facere, at repellendus omnis minima qui doloremque deleniti nam.
-        </p>
+
+        <div class="adv">
+            <h3>
+                advertisement
+            </h3>
+            <img src="{{ asset('./assets/adv.jpg') }}" alt="">
+        </div>
     </div>
-    <div class="comic-specs">
+
+    <div class="comic-details">
         <div class="container">
-            <h3>Specs</h3>
-            
-            <ul>
-                <li>
-                    <span>Series: </span>
-                </li>
-                <li>
-                    <span>{{ $comic['series'] }}</span>
-                </li>
-                <li>
-                    <span>U.S. Price: </span>
-                </li>
-                <li>
-                    <span>{{ $comic['price'] }}</span>
-                </li>
-            </ul>
+
+            <div class="grid-container">
+
+                <div class="comic-talent">
+                    <h3>Talent</h3>
+                    <ul>
+                        <li>
+                            <span>Art by: </span>
+                        </li>
+                        <li>
+                            @foreach ($comic['artists'] as $artist)
+                            <a class="c-blue">
+                                {{ $artist }}
+                            </a>
+                                @php
+                                if(!$loop->last)
+                                 echo ', '
+                                @endphp
+                            @endforeach
+                        </li>
+                        <li>
+                            <span>Written by: </span>
+                        </li>
+                        <li>
+                            @foreach ($comic['writers'] as $artist)
+                            <a class="c-blue">
+                                {{ $artist }}
+                            </a>
+                                @php
+                                if(!$loop->last)
+                                 echo ', '
+                                @endphp
+                            @endforeach
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="comic-specs">
+                    <h3>Specs</h3>
+                    <ul>
+                        <li>
+                            <span>Series: </span>
+                        </li>
+                        <li>
+                            <a class="c-blue txt-up">
+                                {{ $comic['series'] }}
+                            </a>
+                        </li>
+                        <li>
+                            <span>U.S. Price: </span>
+                        </li>
+                        <li>
+                            <span>{{ $comic['price'] }}</span>
+                        </li>
+                        <li>
+                            <span>On Sale Date: </span>
+                        </li>
+                        <li>
+                            <span>{{ $comic['sale_date'] }}</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </div>
     
