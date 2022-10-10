@@ -30,31 +30,24 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-
 .container .logo {
   height: 100px;
 }
-
 .container .main-nav .nav__list {
   display: flex;
   gap: 1.5rem;
   display: none;
 }
-
 .container .main-nav .nav__list .nav__list__item {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1rem;
 }
-
-.container .main-nav .nav__list .nav__list__item.active,
-.container .main-nav .nav__list .nav__list__item:hover {
+.container .main-nav .nav__list .nav__list__item.active, .container .main-nav .nav__list .nav__list__item:hover {
   color: #0C7CEC;
   position: relative;
 }
-
-.container .main-nav .nav__list .nav__list__item.active:after,
-.container .main-nav .nav__list .nav__list__item:hover:after {
+.container .main-nav .nav__list .nav__list__item.active:after, .container .main-nav .nav__list .nav__list__item:hover:after {
   position: absolute;
   height: 5px;
   width: 100%;
@@ -69,36 +62,30 @@ a {
     display: flex !important;
   }
 }
-
 .footer-header {
   background-color: #0C7CEC;
 }
-
 .footer-header .container {
   color: #FFF;
   padding: 3rem 1rem;
 }
-
 .footer-header .container .footer-list {
   display: flex;
   gap: 1.5rem;
   white-space: nowrap;
 }
-
 .footer-header .container .footer-list .footer__list__item {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1rem;
   flex-grow: 1;
 }
-
 .footer-header .container .footer-list .footer__list__item a {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
-
 .footer-header .container .footer-list .footer__list__item a img {
   height: 50px;
 }
@@ -119,22 +106,19 @@ a:hover {
   span {
     display: inline;
   }
-
   a:hover {
     flex-direction: row;
   }
 }
-
 .footer-main {
-  background-image: url(/images/footer-bg.jpg?dfd68d2946f211e1b678af05fd2f830b);
+  background-image: url("../../public/assets/footer-bg.jpg");
   background-size: cover;
 }
-
 .footer-main .container {
   display: flex;
   padding: 2rem 0;
   color: #FFF;
-  background-image: url(/images/dc-logo-bg.png?f4404ce9dc132a08a47f19e3f73f1417);
+  background-image: url("../../public/assets/dc-logo-bg.png");
   background-repeat: no-repeat;
   background-position: center right;
   gap: 2rem;
@@ -145,24 +129,20 @@ a:hover {
 .lists-wrapper .list {
   margin-bottom: 1rem;
 }
-
 .lists-wrapper .list:first-child {
   display: flex;
   flex-direction: column;
 }
-
 .lists-wrapper .list h3 {
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 1rem;
 }
-
 .lists-wrapper .list li:not(.list-title) {
   line-height: 1.5rem;
   font-size: 0.75rem;
   color: #818181;
 }
-
 .lists-wrapper .list li a:hover {
   text-decoration: underline;
 }
@@ -170,31 +150,26 @@ a:hover {
 .footer-footer {
   background-color: #303030;
 }
-
 .footer-footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
 }
-
 .footer-footer .container .sign-up {
   color: white;
   border: 1px solid #0C7CEC;
   padding: 1rem;
   cursor: pointer;
 }
-
 .footer-footer .container .socials {
   display: flex;
   gap: 2rem;
   align-items: center;
 }
-
 .footer-footer .container .socials .socials-title {
   color: #0C7CEC;
 }
-
 .footer-footer .container .socials .icons .list-wrapper {
   display: flex;
   gap: 1.5rem;
@@ -204,14 +179,12 @@ main {
   background-color: #1c1c1c;
   color: white;
 }
-
 main .jumbotron {
-  background-image: url(/images/jumbotron.jpg?1b0a3671766964a4114f90322970b124);
+  background-image: url("../../public/assets/jumbotron.jpg");
   background-position: top;
   background-size: cover;
   height: 40vh;
 }
-
 main .container {
   padding-top: 3rem;
   display: flex;
@@ -220,7 +193,6 @@ main .container {
   gap: 2rem;
   position: relative;
 }
-
 main .container .current {
   text-transform: uppercase;
   position: absolute;
@@ -233,7 +205,6 @@ main .container .current {
   align-items: center;
   padding: 0 1rem;
 }
-
 main .container .load {
   padding: 1rem 5rem;
   background-color: #0C7CEC;
@@ -250,11 +221,9 @@ main .container .load {
   font-size: 1rem;
   font-weight: normal;
 }
-
 .card-container a:hover h4 {
   text-decoration: underline;
 }
-
 .card-container a img {
   aspect-ratio: 1/1;
   -o-object-fit: cover;
@@ -263,7 +232,6 @@ main .container .load {
      object-position: top;
   margin-bottom: 1rem;
 }
-
 .card-container a h4 {
   margin-bottom: 2rem;
 }
@@ -273,10 +241,8 @@ main .container .load {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 @media (min-width: 980px) {
   .card-container {
     grid-template-columns: repeat(6, 1fr);
   }
 }
-

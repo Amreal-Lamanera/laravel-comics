@@ -11,7 +11,7 @@
     <div class="card-container">
         @forelse ($comics as $comic)
         <div class="card">
-            <a href="#nogo">
+            <a href="{{ route('comics.show', $loop->index) }}">
                 <img src="{{ $comic['thumb'] }}" alt="{{ $comic['series'] }}">
                 <h4>{{ $comic['series'] }}</h4>
             </a>

@@ -7,53 +7,43 @@
         $headerWidg = [
             [
                 'title' => 'home',
-                'active' => true,
-                'a' => '',
+                'routeName' => 'home',
             ],
             [
                 'title' => 'comics',
-                'active' => false,
-                'a' => 'comics',
+                'routeName' => 'comics.index',
             ],
             [
                 'title' => 'movies',
-                'active' => false,
-                'a' => '',
+                'routeName' => 'movies',
             ],
             [
                 'title' => 'tv',
-                'active' => false,
-                'a' => '',
+                'routeName' => 'tv',
             ],
             [
                 'title' => 'games',
-                'active' => false,
-                'a' => '',
+                'routeName' => 'games',
             ],
             [
                 'title' => 'collectibles',
-                'active' => false,
-                'a' => '',
+                'routeName' => 'collectibles',
             ],
             [
                 'title' => 'videos',
-                'active' => false,
-                'a' => '',
+                'routeName' => 'videos',
             ],
             [
                 'title' => 'fans',
-                'active' => false,
-                'a' => '',
+                'routeName' => 'fans',
             ],
             [
                 'title' => 'news',
-                'active' => false,
-                'a' => '',
+                'routeName' => 'news',
             ],
             [
                 'title' => 'shop',
-                'active' => false,
-                'a' => '',
+                'routeName' => 'shop',
             ]
         ];
     @endphp
@@ -63,8 +53,8 @@
         <ul class="nav__list">
 
             @foreach($headerWidg as $item)
-            <li class="nav__list__item {{ $item['active'] ? 'active' : '' }}">
-                <a href="./{{ $item['a'] }}">
+            <li class="nav__list__item {{ str_contains(Route::currentRouteName(), explode('.', $item['title'])[0]) ? 'active' : '' }}">
+                <a href="{{ isset($item['routeName']) ? route($item['routeName']) : '/' }}">
                     {{ $item['title'] }}
                 </a>
             </li>

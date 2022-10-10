@@ -15,11 +15,36 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/comics', function () {
     $data = [
         'comics' => config('comics')
     ];
-    return view('comics', $data);
-});
+    return view('comics.index', $data);
+})->name('comics.index');
+
+Route::get('/prodotti/{id}', function ($id) {
+    $comics = config('comics');
+    // il where controlla già il caso di id negativo, dobbiamo però controllare che l'indice non sia più grande della dimensione dell'array
+    if ($id < count($comics)) {
+        $comic = $comics[$id];
+        $data = [
+            'comic' => $comic
+        ];
+
+        return view('comics.show', $data);
+    } else {
+        abort(404);
+    }
+})->where('id', '[0-9]+')
+    ->name('comics.show');
+
+Route::view('/movies', 'movies')->name('movies');
+Route::view('/tv', 'tv')->name('tv');
+Route::view('/games', 'games')->name('games');
+Route::view('/collectibles', 'collectibles')->name('collectibles');
+Route::view('/videos', 'videos')->name('videos');
+Route::view('/fans', 'fans')->name('fans');
+Route::view('/news', 'news')->name('news');
+Route::view('/shop', 'shop')->name('shop');
