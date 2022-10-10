@@ -72,10 +72,10 @@
                             <a class="c-blue">
                                 {{ $artist }}
                             </a>
-                                @php
-                                if(!$loop->last)
-                                 echo ', '
-                                @endphp
+                            @php
+                            if(!$loop->last)
+                                echo ', '
+                            @endphp
                             @endforeach
                         </li>
                         <li>
@@ -86,10 +86,10 @@
                             <a class="c-blue">
                                 {{ $artist }}
                             </a>
-                                @php
-                                if(!$loop->last)
-                                 echo ', '
-                                @endphp
+                            @php
+                            if(!$loop->last)
+                                echo ', '
+                            @endphp
                             @endforeach
                         </li>
                     </ul>
