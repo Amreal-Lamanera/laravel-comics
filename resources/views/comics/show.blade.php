@@ -52,7 +52,9 @@
             <h3>
                 advertisement
             </h3>
-            <img src="{{ asset('./assets/adv.jpg') }}" alt="">
+            <a href="https://www.youtube.com/channel/UC_J9gDsDgkpLWh7E8acVtqw">
+                <img src="{{ asset('./assets/adv.jpg') }}" alt="">
+            </a>
         </div>
     </div>
 
